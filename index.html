@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Crystal Collector</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header><h1>Crystal Collector!</h1></header>
+    <main>
+      <div class="content"></div>
+      <div class="targetNumber" id="target" value="0"></div>
+      <div class="gameCounter">
+        <div class="wins">
+          Wins:
+          <h2 id="wins"></h2>
+        </div>
+        <div class="losses">
+          Losses:
+          <h2 id="losses"></h2>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="btn" id="red" value="0">Red</button>
+        <button class="btn" id="blue" value="0">Blue</button>
+        <button class="btn" id="yellow" value="0">Yellow</button>
+        <button class="btn" id="green" value="0">Green</button>
+      </div>
+      <div class="score" id="total"></div>
+      <button id="newGame">New Game</button>
+    </main>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+    ></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+  </body>
+</html>
