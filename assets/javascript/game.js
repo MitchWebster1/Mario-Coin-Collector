@@ -25,11 +25,14 @@ $(document).ready(function() {
   }
 
   function newGame() {
+    total = 0;
+    gameFinished = false;
+    feedback = "";
     winningNumber();
-    $("#red").val(randomNumber(1, 12));
-    $("#blue").val(randomNumber(1, 12));
-    $("#yellow").val(randomNumber(1, 12));
-    $("#green").val(randomNumber(1, 12));
+    $("#btn1").val(randomNumber(1, 12));
+    $("#btn2").val(randomNumber(1, 12));
+    $("#btn3").val(randomNumber(1, 12));
+    $("#btn4").val(randomNumber(1, 12));
     updateDisplay();
   }
   function winningNumber() {
@@ -44,13 +47,15 @@ $(document).ready(function() {
       total += parseInt($(this).val());
       checkWin();
       updateDisplay();
-      console.log(total);
-      console.log(target);
     }
   });
 
   $("#newGame").click(function() {
     newGame();
+  });
+
+  $("#resetGame").click(function() {
+    resetGame();
   });
 
   function checkWin() {

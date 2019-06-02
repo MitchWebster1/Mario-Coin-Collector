@@ -9,29 +9,59 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   </head>
   <body>
-    <header><h1>Crystal Collector!</h1></header>
-    <main>
-      <div class="content"></div>
-      <div class="targetNumber" id="target" value="0"></div>
-      <div class="gameCounter">
-        <div class="wins">
-          Wins:
-          <h2 id="wins"></h2>
-        </div>
-        <div class="losses">
-          Losses:
-          <h2 id="losses"></h2>
-        </div>
+    <main class="container">
+      <header>Coin Collector!</header>
+      <div class="content">
+        <p>You will be given a random number at the start of the game.</p>
+        <p>
+          There are four boxes below. By clicking on a box you will add a
+          specific amount of points to your total score.
+        </p>
+        <p>
+          You win the game by matching your total score to the random number,
+          you lose the game if your total score goes above the random number.
+        </p>
+        <p>The value of each box is hidden from you until you click on it.</p>
+        <p>
+          Each time when the game starts, the game will change the values of
+          each box.
+        </p>
+      </div>
+
+      <div class="targetNumber">
+        Target
+        <div id="target"></div>
+      </div>
+      <div class="wins">
+        Wins
+        <h2 id="wins"></h2>
+      </div>
+      <div class="losses">
+        Losses
+        <h2 id="losses"></h2>
       </div>
       <div class="buttons">
-        <button class="btn" id="red" value="0">Red</button>
-        <button class="btn" id="blue" value="0">Blue</button>
-        <button class="btn" id="yellow" value="0">Yellow</button>
-        <button class="btn" id="green" value="0">Green</button>
+        <button class="btn btn1" id="btn1" value="0">
+          <img src="assets/images/retroBlockQuestion.png" />
+        </button>
+        <button class="btn btn2" id="btn2" value="0">
+          <img src="assets/images/retroCoin.png" />
+        </button>
+        <button class="btn btn3" id="btn3" value="0">
+          <img src="assets/images/retroBlockExclamation.png" />
+        </button>
+        <button class="btn btn4" id="btn4" value="0">
+          <img src="assets/images/retroStar.png" />
+        </button>
       </div>
-      <div class="score" id="total"></div>
-      <button id="newGame">New Game</button>
+      <div class="score">
+        Score
+        <div id="total"></div>
+      </div>
+      <button id="newGame" class="newGame">New Game</button>
+      <button id="resetGame" class="resetGame">Reset Game</button>
     </main>
+    <footer>copyright &copy; 2019</footer>
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
