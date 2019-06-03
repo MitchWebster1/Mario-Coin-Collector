@@ -8,10 +8,16 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   </head>
-  <body>
-    <main class="container">
+  <body id="body">
+    <div class="gameWin" id="gameWin">
+      <img src="assets/images/marioWin.jpg" />
+    </div>
+    <div class="gameOver" id="gameOver">
+      <img src="assets/images/marioGameOver.jpg" />
+    </div>
+    <main class="container" id="container">
       <header>Coin Collector!</header>
-      <div class="content">
+      <div class="content" id="content">
         <p>You will be given a random number at the start of the game.</p>
         <p>
           There are four boxes below. By clicking on a box you will add a
@@ -27,7 +33,6 @@
           each box.
         </p>
       </div>
-
       <div class="targetNumber">
         Target
         <div id="target"></div>

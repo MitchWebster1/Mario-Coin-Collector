@@ -6,10 +6,26 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  background: url(../images/SuperMarioBrosMap2-1BG2.png) no-repeat center bottom
-    fixed;
-  background-size: cover;
   text-align: center;
+  background-color: black;
+}
+
+.gameWin {
+  z-index: 10;
+}
+
+.gameWin img {
+  width: 1080px;
+  height: auto;
+}
+
+.gameOver {
+  z-index: 10;
+}
+
+.gameOver img {
+  width: 1080px;
+  height: auto;
 }
 
 header {
@@ -24,6 +40,9 @@ header {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(8, 1fr);
+  background: url(../images/SuperMarioBrosMap2-1BG2.png) no-repeat center bottom
+    fixed;
+  background-size: cover;
 }
 
 .content {
@@ -82,7 +101,8 @@ header {
   justify-content: center;
   display: flex;
 }
-img {
+
+.buttons img {
   width: 96px;
   height: auto;
 }
@@ -94,12 +114,8 @@ img {
   border: none;
 }
 
-/* .btn1 {
-  width: 25%;
-  height: 100%;
-} */
-
 footer {
   flex-shrink: 0;
-  height: 3rem;
+  height: 1.25rem;
+  color: white;
 }
