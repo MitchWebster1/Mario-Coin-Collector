@@ -4,10 +4,16 @@ $(document).ready(function() {
   let gameFinished = false;
   let total = 0;
   let target = 0;
+  const sound = new Audio();
 
   function randomNumber(min, max) {
     let number = Math.floor(Math.random() * (max - min) + min);
     return number;
+  }
+
+  function winningNumber() {
+    target = randomNumber(19, 120);
+    $("#target").text(target);
   }
 
   function updateDisplay() {
@@ -26,11 +32,6 @@ $(document).ready(function() {
     // $("#container").hide();
   }
 
-  function winningNumber() {
-    target = randomNumber(19, 120);
-    $("#target").text(target);
-  }
-
   function newGame() {
     total = 0;
     gameFinished = false;
@@ -43,24 +44,29 @@ $(document).ready(function() {
     updateDisplay();
   }
 
-  $(".btn").click(function() {
-    if (gameFinished) {
-      return;
-    } else {
-      const audio = new Audio("../images/coin.wav");
-      total += parseInt($(this).val());
-      audio.play();
-      checkWin();
-      updateDisplay();
-    }
-  });
-
   $("#newGame").click(function() {
     newGame();
   });
 
   $("#resetGame").click(function() {
     resetGame();
+  });
+
+  function playSound(link) {
+    sound.src = link;
+    sound.play();
+  }
+
+  $(".btn").click(function() {
+    if (gameFinished) {
+      return;
+    } else {
+      total += parseInt($(this).val());
+      // playSound("../images/coin.mp3");
+      checkWin();
+      updateDisplay();
+      console.log(sound);
+    }
   });
 
   function lose() {
@@ -71,10 +77,9 @@ $(document).ready(function() {
   }
 
   function gameOver() {
-    const audio = new Audio("../images/gameOver.wav");
     gameFinished = true;
     losses++;
-    audio.play();
+    // playSound("../images/gameOver.wav");
     $("#container")
       .hide(50, lose())
       .delay(4000)
@@ -89,10 +94,9 @@ $(document).ready(function() {
   }
 
   function gameWin() {
-    const audio = new Audio("../images/win.wav");
     gameFinished = true;
     wins++;
-    audio.play();
+    // playSound("../images/win.wav");
     $("#container")
       .hide(50, win())
       .delay(4000)

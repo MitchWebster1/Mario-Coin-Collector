@@ -98,8 +98,9 @@ header {
 .buttons {
   grid-column: 5 / 9;
   grid-row: 6 / 8;
-  justify-content: center;
   display: flex;
+  /* flex-direction: column; */
+  /* justify-content: center; */
 }
 
 .buttons img {
@@ -109,9 +110,23 @@ header {
 
 .btn {
   cursor: url("../images/Mario.png"), auto;
-  margin: 3px;
+  margin: auto 3px;
   background: none;
   border: none;
+  height: 50%;
+}
+
+@keyframes slide {
+  50% {
+    margin-top: 0;
+  }
+}
+
+.btn:focus {
+  animation-name: slide;
+  animation-duration: 500ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
 }
 
 footer {
