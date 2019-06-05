@@ -122,9 +122,9 @@ header {
   }
 }
 
-.btn:focus {
+.btn:active {
   animation-name: slide;
-  animation-duration: 500ms;
+  animation-duration: 200ms;
   animation-timing-function: linear;
   animation-iteration-count: 1;
 }

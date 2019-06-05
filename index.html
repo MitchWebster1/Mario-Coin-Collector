@@ -4,15 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Crystal Collector</title>
+    <title>Coin Collector</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
   </head>
   <body id="body">
     <div class="gameWin" id="gameWin">
+      <audio id="winAudio" src="assets/audio/win.wav"></audio>
       <img src="assets/images/marioWin.jpg" />
     </div>
     <div class="gameOver" id="gameOver">
+      <audio id="loseAudio" src="assets/audio/gameOver.wav"></audio>
       <img src="assets/images/marioGameOver.jpg" />
     </div>
     <main class="container" id="container">
@@ -46,7 +48,8 @@
         <h2 id="losses"></h2>
       </div>
       <div class="buttons">
-        <button type="button" class="btn btn1" id="btn1" value="0">
+        <audio id="btn" src="assets/audio/coin.wav"></audio>
+        <button class="btn btn1" id="btn1" value="0">
           <img src="assets/images/retroBlockQuestion.png" />
         </button>
         <button class="btn btn2" id="btn2" value="0">

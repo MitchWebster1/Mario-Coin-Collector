@@ -4,7 +4,6 @@ $(document).ready(function() {
   let gameFinished = false;
   let total = 0;
   let target = 0;
-  const sound = new Audio();
 
   function randomNumber(min, max) {
     let number = Math.floor(Math.random() * (max - min) + min);
@@ -52,8 +51,8 @@ $(document).ready(function() {
     resetGame();
   });
 
-  function playSound(link) {
-    sound.src = link;
+  function playSound(id) {
+    const sound = document.getElementById(id);
     sound.play();
   }
 
@@ -62,10 +61,9 @@ $(document).ready(function() {
       return;
     } else {
       total += parseInt($(this).val());
-      // playSound("../images/coin.mp3");
+      playSound("btn");
       checkWin();
       updateDisplay();
-      console.log(sound);
     }
   });
 
@@ -79,7 +77,7 @@ $(document).ready(function() {
   function gameOver() {
     gameFinished = true;
     losses++;
-    // playSound("../images/gameOver.wav");
+    playSound("loseAudio");
     $("#container")
       .hide(50, lose())
       .delay(4000)
@@ -96,7 +94,7 @@ $(document).ready(function() {
   function gameWin() {
     gameFinished = true;
     wins++;
-    // playSound("../images/win.wav");
+    playSound("winAudio");
     $("#container")
       .hide(50, win())
       .delay(4000)
