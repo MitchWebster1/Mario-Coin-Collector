@@ -1,6 +1,6 @@
 html,
 body {
-  height: 100%;
+  height: 100vh;
 }
 
 body {
@@ -10,31 +10,19 @@ body {
   background-color: black;
 }
 
-.gameWin {
-  z-index: 10;
-}
-
+/* Image for the win screen */
 .gameWin img {
   width: 1080px;
   height: auto;
 }
 
-.gameOver {
-  z-index: 10;
-}
-
+/* Images for the loss screen */
 .gameOver img {
   width: 1080px;
   height: auto;
 }
 
-header {
-  height: 5rem;
-  font-size: 4em;
-  grid-column: 1 / 13;
-  grid-row: 1;
-}
-
+/* Sets up grid and houses background image */
 .container {
   flex: 1 0 auto;
   display: grid;
@@ -43,6 +31,13 @@ header {
   background: url(../images/SuperMarioBrosMap2-1BG2.png) no-repeat center bottom
     fixed;
   background-size: cover;
+}
+
+header {
+  height: 5rem;
+  font-size: 4em;
+  grid-column: 1 / 13;
+  grid-row: 1;
 }
 
 .content {
@@ -57,6 +52,7 @@ header {
   padding: 0.5em;
 }
 
+/* New game button */
 .newGame {
   grid-column: 4 / 5;
   grid-row: 4 / 5;
@@ -64,6 +60,7 @@ header {
   background-color: #3eb83e;
 }
 
+/* Reset game button */
 .resetGame {
   grid-column: 9 / 10;
   grid-row: 4 / 5;
@@ -71,6 +68,7 @@ header {
   background-color: #df4343;
 }
 
+/* Displays number values */
 .targetNumber {
   grid-column: 4 / 7;
   grid-row: 5 / 6;
@@ -94,13 +92,13 @@ header {
   grid-row: 4 / 5;
   font-size: 2.5em;
 }
+/* ************************ */
 
+/* Button styling */
 .buttons {
   grid-column: 5 / 9;
   grid-row: 6 / 8;
   display: flex;
-  /* flex-direction: column; */
-  /* justify-content: center; */
 }
 
 .buttons img {
@@ -116,6 +114,7 @@ header {
   height: 50%;
 }
 
+/* Button animations */
 @keyframes slide {
   50% {
     margin-top: 0;
@@ -128,6 +127,7 @@ header {
   animation-timing-function: linear;
   animation-iteration-count: 1;
 }
+/* ******************** */
 
 footer {
   flex-shrink: 0;
