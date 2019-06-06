@@ -99,10 +99,11 @@ header {
   grid-column: 5 / 9;
   grid-row: 6 / 8;
   display: flex;
+  justify-content: center;
 }
 
 .buttons img {
-  width: 96px;
+  width: 100%;
   height: auto;
 }
 
